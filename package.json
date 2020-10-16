@@ -7,6 +7,7 @@
     "start": "sirv public",
     "validate": "svelte-check",
     "postinstall": "npm run build"
+    "web": "sirv public --port $PORT"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
