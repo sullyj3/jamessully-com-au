@@ -4,10 +4,9 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "start": "sirv public",
+    "start": "sirv public --host $HOST --port $PORT",
     "validate": "svelte-check",
-    "postinstall": "npm run build",
-    "web": "sirv public --host $HOST --port $PORT"
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
