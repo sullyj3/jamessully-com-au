@@ -19,5 +19,5 @@ const hello$ = ajax(helloRequest).pipe(
 
 <div>
 	<h1>yo</h1>
-		<p>text: {$hello$}</p>
+	<p>text: {$hello$}</p>
 </div>
