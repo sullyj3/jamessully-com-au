@@ -12,24 +12,19 @@ const helloRequest: AjaxRequest = {
 }
 
 const hello$ = ajax(helloRequest).pipe(
-		map(resp => console.log('resp: ', resp)),
-		map((resp: AjaxResponse) => resp.responseText.map(
-			obj => JSON.stringify(obj)
-		))
-	);
+		map((resp: AjaxResponse) => resp.response),
+);
 
 let response: string[] = undefined;
 
-hello$.subscribe((strs: string[]) => {
-	console.log(`strs: ${strs}`);
-	response = strs;
+hello$.subscribe((r: string) => {
+	console.log(`r: ${r}`);
+	response = r;
 });
 
 </script>
 
 <div>
 	<h1>yo</h1>
-	{#each $response as respText}
-		<p>text: {respText}</p>
-	{/each}
+		<p>text: {response}</p>
 </div>
