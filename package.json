@@ -6,7 +6,7 @@
     "dev": "rollup -c -w",
     "start": "sirv public",
     "validate": "svelte-check",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
     "web": "sirv public --port $PORT"
   },
   "devDependencies": {
