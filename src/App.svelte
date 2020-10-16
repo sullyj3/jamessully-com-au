@@ -1,7 +1,7 @@
 <script lang="ts">
 import { ajax } from "rxjs/ajax";
 import type { AjaxRequest, AjaxResponse } from "rxjs/ajax";
-import { map } from "rxjs/operators";
+import { map, startWith } from "rxjs/operators";
 	
 const helloRequest: AjaxRequest = {
 	url: 'https://jimmy-echo-server.herokuapp.com/hello',
@@ -13,6 +13,7 @@ const helloRequest: AjaxRequest = {
 
 const hello$ = ajax(helloRequest).pipe(
 		map((resp: AjaxResponse) => resp.response),
+		startWith("Fetching data..."),
 );
 
 </script>
