@@ -1,8 +1,4 @@
 {
   "root": "public/",
-  "clean_urls": "true",
-  "routes": {
-    "/public/build/*": "/public/build/",
-    "/**": "index.html"
-  }
+  "clean_urls": "true"
 }
