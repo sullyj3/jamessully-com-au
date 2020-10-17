@@ -5,6 +5,6 @@
     "build": "cd client && npm run build",
     "dev": "cd client && npm run dev",
     "start": "cd client && npm run start",
-    "postinstall": "cd client && npm postinstall"
+    "postinstall": "cd client && npm run postinstall"
   }
 }
