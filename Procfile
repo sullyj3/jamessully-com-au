@@ -1,2 +1,1 @@
-web: cd client && npm run start
-api: echo 'starting api' && echo-server
+web: echo-server & cd client && npm run start & wait -n
