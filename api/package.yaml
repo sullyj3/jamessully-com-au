@@ -1,0 +1,28 @@
+name:    echo-server
+version: "0.0.0"
+
+dependencies:
+- base
+- yesod-core
+- wai-cors
+- wai
+- warp
+- text
+
+# The library contains all of our application code. The executable
+# defined below is just a thin wrapper.
+library:
+  source-dirs: src
+
+# Runnable executable for our application
+executables:
+  echo-server:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+    - -W
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - echo-server

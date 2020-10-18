@@ -1,0 +1,3 @@
+/              HomeR GET
+/hello         HelloR GET
+/echo          EchoR POST
