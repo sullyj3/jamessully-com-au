@@ -4,7 +4,7 @@ import type { AjaxRequest, AjaxResponse } from "rxjs/ajax";
 import { map, startWith } from "rxjs/operators";
 	
 const helloRequest: AjaxRequest = {
-	url: 'https://jimmy-echo-server.herokuapp.com/hello',
+	url: '/api',
 	headers: {
 		'Accept': '*/*',
 	},
