@@ -15,6 +15,7 @@ main :: IO ()
 main = do
   port <- getPort
   application <- toWaiApp App
+  putStrLn $ "starting API on port " <> show port
   Network.Wai.Handler.Warp.run port (cors myCORSPolicy application)
   where
     getPort :: IO Int
