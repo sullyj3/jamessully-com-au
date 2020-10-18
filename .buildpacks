@@ -1,1 +1,2 @@
 client=https://github.com/heroku/heroku-buildpack-nodejs
+api=https://github.com/mfine/heroku-buildpack-stack
