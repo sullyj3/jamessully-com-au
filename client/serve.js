@@ -6,7 +6,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const PORT = process.env.PORT || 3000;
 
 const APIPORT = process.env.APIPORT || 6900;
-const APIHOST = process.env.APIHOST || "localhost";
+const APIHOST = process.env.APIHOST || "http://localhost";
 const apihostport = `${APIHOST}:${APIPORT}`
 
 polka()
