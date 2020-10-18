@@ -18,7 +18,7 @@ main = do
   Network.Wai.Handler.Warp.run port (cors myCORSPolicy application)
   where
     getPort :: IO Int
-    getPort = read <$> getEnv "PORT" <|> pure defaultPort
+    getPort = read <$> getEnv "APIPORT" <|> pure defaultPort
 
     defaultPort = 6900
 
