@@ -1,4 +1,4 @@
-name:    echo-server
+name:    jamessully-com-au
 version: "0.0.0"
 
 dependencies:
@@ -16,7 +16,7 @@ library:
 
 # Runnable executable for our application
 executables:
-  echo-server:
+  jamessully-com-au:
     main: Main.hs
     source-dirs: app
     ghc-options:
@@ -25,4 +25,4 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - echo-server
+    - jamessully-com-au
