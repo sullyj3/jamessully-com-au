@@ -1,1 +1,1 @@
-web: echo-server & cd client && npm run start & wait -n
+web: /app/.local/bin/echo-server & cd client && npm run start & wait -n
