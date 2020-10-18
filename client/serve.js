@@ -1,22 +1,20 @@
+const sirv = require('sirv');
 const polka = require('polka');
+const compress = require('compression')();
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
-function one(req, res, next) {
-  req.hello = 'world';
-  next();
-}
+const PORT = process.env.PORT || 3000;
 
-function two(req, res, next) {
-  req.foo = '...needs better demo 😔';
-  next();
-}
+const APIPORT = process.env.APIPORT || 6900;
+const APIHOST = process.env.APIHOST || "localhost";
+const apihostport = `${APIHOST}:${APIPORT}`
 
 polka()
-  .use(one, two)
-  .get('/users/:id', (req, res) => {
-    console.log(`~> Hello, ${req.hello}`);
-    res.end(`User: ${req.params.id}`);
-  })
-  .listen(3000, err => {
+	// todo: determine whether we need to set changeOrigin to true
+	.use('/api', createProxyMiddleware({ target: apihostport, changeOrigin: false }))
+	.use( compress, sirv('public'))
+  .listen(PORT, err => {
     if (err) throw err;
-    console.log(`> Running on localhost:3000`);
+    console.log(`> Running on localhost:${PORT}`);
+    console.log(`> proxying /api to ${apihostport}`);
   });
