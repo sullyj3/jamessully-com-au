@@ -85,10 +85,10 @@ const clock$ = timer(0, 1000).pipe(
 	</div>
 	<div id="header-links">
 		<div class="logo-link">
-			<a href="https://github.com/sullyj3"><img id="gh-logo" src="images/GitHub-Mark-Light-120px-plus.png"></a>
+			<a href="https://github.com/sullyj3" target="_blank"><img id="gh-logo" src="images/GitHub-Mark-Light-120px-plus.png"></a>
 		</div>
 		<div class="logo-link">
-			<a href="https://open.spotify.com/artist/0IildnIiMV4ON8bxoDOUF8"><img id="spotify-logo" src="images/Spotify_Icon_RGB_Green.png"></a>
+			<a href="https://open.spotify.com/artist/0IildnIiMV4ON8bxoDOUF8" target="_blank"><img id="spotify-logo" src="images/Spotify_Icon_RGB_Green.png"></a>
 		</div>
 	</div>
 </div>
