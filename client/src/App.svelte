@@ -24,8 +24,10 @@ const clock$ = timer(0, 1000).pipe(
 </script>
 
 <style>
-	:root {
+	:global(body) {
 		background-color: #ddd;
+		margin: 0;
+		padding: 0;
 	}
 
 	#header{
@@ -53,7 +55,6 @@ const clock$ = timer(0, 1000).pipe(
 		height: 75px;
 	}
 
-
 	#james-link {
 		display: flex;
 		align-items: center;
@@ -65,30 +66,36 @@ const clock$ = timer(0, 1000).pipe(
 		color: inherit;
 	}
 
+	#random-stuff {
+		height: 100%;
+		background-color: #eee;
+		margin: 0 150px;
+		padding: 20px;
+	}
+
 </style>
 
 <svelte:head>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 </svelte:head>
 
-<div>
-	<div id="header">
-		<div id="james-link">
-			<a href="/"><h1>James Sully</h1></a>
+<div id="header">
+	<div id="james-link">
+		<a href="/"><h1>James Sully</h1></a>
+	</div>
+	<div id="header-links">
+		<div class="logo-link">
+			<a href="https://github.com/sullyj3"><img id="gh-logo" src="images/GitHub-Mark-Light-120px-plus.png"></a>
 		</div>
-		<div id="header-links">
-			<div class="logo-link">
-				<a href="https://github.com/sullyj3"><img id="gh-logo" src="images/GitHub-Mark-Light-120px-plus.png"></a>
-			</div>
-			<div class="logo-link">
-				<a href="https://open.spotify.com/artist/0IildnIiMV4ON8bxoDOUF8"><img id="spotify-logo" src="images/Spotify_Icon_RGB_Green.png"></a>
-			</div>
+		<div class="logo-link">
+			<a href="https://open.spotify.com/artist/0IildnIiMV4ON8bxoDOUF8"><img id="spotify-logo" src="images/Spotify_Icon_RGB_Green.png"></a>
 		</div>
 	</div>
-	<div id='random-stuff'>
-		<p>the server says: {$hello$}</p>
-		<h2>Current time:</h2>
-		<p>{$clock$}</p>
-	</div>
+</div>
+<div id='random-stuff'>
+	<h2>Current time:</h2>
+	<p>{$clock$}</p>
+	<h3>The server says:</h3>
+	<p>{$hello$}</p>
 </div>
 
