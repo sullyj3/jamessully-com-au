@@ -35,29 +35,34 @@ const clock$ = timer(0, 1000).pipe(
 		background-color: #333;
 		height: 200;
 		display: grid;
-		grid-template: 100% / 4fr 2fr;
+		grid-template: 100% / 8fr 2fr;
+		padding: 0px 25px;
 	}
 
 	#header-links {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: flex-end;
 	}
+
+	.logo-link {
+		padding: 0px 10px;
+	}
+
+	.logo-link img {
+		height: 75px;
+	}
+
 
 	#james-link {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		padding-left: 30px;
 	}
 
 	#james-link a, a:hover, a:focus, a:active {
 		text-decoration: none;
 		color: inherit;
-	}
-
-	.logo-link img {
-		height: 75px;
 	}
 
 </style>
